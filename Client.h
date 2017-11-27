@@ -1,6 +1,6 @@
 //Client.h
 //make base class for investor (brokrage account), banking client (checking)
-
+#include <iostream>
 using namespace std;
 #ifndef CLIENT_H
 #define CLIENT_H

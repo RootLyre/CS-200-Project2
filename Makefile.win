@@ -1,0 +1,46 @@
+# Project: BankingVX
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = BankingVX1.o Account.o Checking.o Client.o Investment_Account.o Banking_Client.o Brokerage_Client.o
+LINKOBJ  = BankingVX1.o Account.o Checking.o Client.o Investment_Account.o Banking_Client.o Brokerage_Client.o
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = BankingVX.exe
+CXXFLAGS = $(CXXINCS) -g3 -std=c++11
+CFLAGS   = $(INCS) -g3 -std=c++11
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+BankingVX1.o: BankingVX1.cpp
+	$(CPP) -c BankingVX1.cpp -o BankingVX1.o $(CXXFLAGS)
+
+Account.o: Account.cpp
+	$(CPP) -c Account.cpp -o Account.o $(CXXFLAGS)
+
+Checking.o: Checking.cpp
+	$(CPP) -c Checking.cpp -o Checking.o $(CXXFLAGS)
+
+Client.o: Client.cpp
+	$(CPP) -c Client.cpp -o Client.o $(CXXFLAGS)
+
+Investment_Account.o: Investment_Account.cpp
+	$(CPP) -c Investment_Account.cpp -o Investment_Account.o $(CXXFLAGS)
+
+Banking_Client.o: Banking_Client.cpp
+	$(CPP) -c Banking_Client.cpp -o Banking_Client.o $(CXXFLAGS)
+
+Brokerage_Client.o: Brokerage_Client.cpp
+	$(CPP) -c Brokerage_Client.cpp -o Brokerage_Client.o $(CXXFLAGS)
