@@ -33,10 +33,18 @@ int main(int argc, char *argv[])
         switch(option)
         {
             case 1:
+                //	Banking_Client b1;
+                {
                 	Banking_Client b1;
+                	
+				}
                 	break;
             case 2:
-                  	Brokerage_Client br1;
+                 {
+                 	Brokerage_Client br1;
+    
+                 	
+				 }
                		break;
             case 3: 
             		break;       

@@ -29,10 +29,10 @@ Brokerage_Client::Brokerage_Client(){
       {
           cout <<"Enter a new 4 digit account number: ";
           cin >>account;
-          ch[i].setInfo("123" + account, getClientID());
+          inv[i].setInfo("123" + account, getClientID());
           cout <<"Enter an initial balance for this account: $";
           cin >>initialBalance;
-          ch[i].updateBalance(initialBalance);
+          inv[i].updateBalance(initialBalance);
       }
       
 }
@@ -43,7 +43,7 @@ string Brokerage_Client::print()const{
        str += "\n";
        str += "ID\tAccount\tAmount\n";
        for (i = 0; i < numberOfAccounts; i++)
-             strIN += ch[i].print() + "\n";
+             strIN += inv[i].print() + "\n";
        
        str += strIN;
        

@@ -6,6 +6,11 @@
 #include"Investment_Account.h"
 using namespace std;
 
+Investment_Account::Investment_Account()
+{
+	
+}
+
 Investment_Account
 ::Investment_Account(string accMgr, string accNum, string accOwnerID)
 :Account("321" + accNum, accOwnerID){ accountManager = accMgr;}

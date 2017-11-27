@@ -1,6 +1,7 @@
 //Brokerage_Client.h
 #include"Client.h"
 #include"Investment_Account.h"
+using namespace std;
 #ifndef BROKERAGE_CLIENT_H
 #define BROKERAGE_CLIENT_H
 class Brokerage_Client: public Client{
@@ -8,7 +9,7 @@ class Brokerage_Client: public Client{
          Brokerage_Client();
          virtual string print() const;
       private:
-        int numberOfAccount; //no more than 2
+        int numberOfAccounts; //no more than 2
         
         Investment_Account inv[2];
 };
