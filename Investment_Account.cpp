@@ -20,7 +20,7 @@ string Investment_Account::print() const{
      convert <<getBalance();
      
      string str = accountManager;
-     str += "\t";
+     //str += "\t";
      str += getAccountOwnerID();
      str += "\t";
      str += getAccountNumber();
